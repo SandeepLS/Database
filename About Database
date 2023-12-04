@@ -1,4 +1,10 @@
-Learm:- https://www.integrate.io/blog/the-sql-vs-nosql-difference/#two
+Database:- is a organized collection of data. it is collection of tables, queries, reports, view and other object.
+Ex:- Airline Booking Data.
+
+What can we stor in Database:- text, number, picture.
+
+Learn:- https://www.integrate.io/blog/the-sql-vs-nosql-difference/#two
+
 SQL:- is a programing langvage, that is used to interact with relational database.
 ex:- we are building an application or software, now our application definetly need data, but the data is genrally not stored in the application itself,
 most cases the data is stored in the relational database.
