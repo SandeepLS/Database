@@ -14,3 +14,13 @@ FROM table_name;
 
 Ex:-SELECT DISTINCT Country FROM Customers;
 Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
+
+
+3)Count Distinct:-
+By using the DISTINCT keyword in a function called COUNT, we can return the number of different countries.
+Example:-1
+SELECT COUNT(DISTINCT Country) FROM Customers; //is not supported in Microsoft Access databases.
+
+Example:-2
+SELECT Count(*) AS DistinctCountries
+FROM (SELECT DISTINCT Country FROM Customers); //Here is a workaround for MS Access:
