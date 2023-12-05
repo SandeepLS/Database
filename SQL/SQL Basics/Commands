@@ -1,0 +1,17 @@
+Create database:- CREATE DATABASE databasename;
+
+Create table:-
+create table Customers(
+CustomerID int primary key,
+CustomerName varchar(225),
+CustomerLN varchar(22),
+City varchar(30),
+Country varchar(30),
+PostalCode varchar(30)
+);
+
+insert table Values;- INSERT INTO Customers VALUES (101, 'Sandeep', 'LS', 'Bangalore', 'India', 560043);
+
+
+
+
