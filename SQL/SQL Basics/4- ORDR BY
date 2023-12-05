@@ -1,0 +1,29 @@
+def:- it is use to set the result-set in Ascending(ASE) / Decending(DESC).
+Syntax:-
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+
+Ex:-
+SELECT * FROM Products
+ORDER BY Price;
+
+Ex:-
+SELECT * FROM Products
+ORDER BY Price DESC;
+
+Ex:-Order Alphabetically
+SELECT * FROM Products
+ORDER BY ProductName;
+
+Ex-Alphabetically dESCENDING
+SELECT * FROM Products
+ORDER BY ProductName DESC;
+
+Ex:-ORDER BY Several Columns
+SELECT * FROM Customers
+ORDER BY Country, CustomerName;
+
+Ex:-Using Both ASC and DESC
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
