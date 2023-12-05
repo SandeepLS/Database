@@ -1,6 +1,6 @@
-Create database:- CREATE DATABASE databasename;
+1)Create database:- CREATE DATABASE databasename;
 
-Create table:-
+2)Create table:-
 create table Customers(
 CustomerID int primary key,
 CustomerName varchar(225),
@@ -10,8 +10,16 @@ Country varchar(30),
 PostalCode varchar(30)
 );
 
-insert table Values;- INSERT INTO Customers VALUES (101, 'Sandeep', 'LS', 'Bangalore', 'India', 560043);
+3)Insert table Values;- INSERT INTO Customers VALUES (101, 'Sandeep', 'LS', 'Bangalore', 'India', 560043);
 
+4)Insert 1 extra column in a table:-
+ALTER TABLE Customers
+ADD Price varchar(255);
+
+5) After the add new column in table, the we add the column values:-
+UPDATE Customers
+SET Price = '77'
+WHERE CustomerID=106;
 
 
 
