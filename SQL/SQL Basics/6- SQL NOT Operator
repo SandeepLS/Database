@@ -1,0 +1,21 @@
+Def:- The NOT operator is used in combination with other operators, to give the opposite result, also called the negative result.
+Syntax:-
+SELECT column1, column2, ...
+FROM table_name
+WHERE NOT condition;
+
+Ex:-Select only the customers that are NOT from Spain
+SELECT * FROM Customers
+WHERE NOT Country = 'Spain';
+
+Ex2:-(NOT LIKE) Select customers that does not start with the letter 'A'
+SELECT * FROM Customers
+WHERE CustomerName NOT LIKE 'A%';
+
+Ex3:-(NOT BETWEEN) Select customers with a customerID not between 10 and 60
+SELECT * FROM Customers
+WHERE CustomerID NOT BETWEEN 10 AND 60;
+
+Ex4:-(NOT IN) Select customers that are not from Paris or London
+SELECT * FROM Customers
+WHERE City NOT IN ('Paris', 'London');
