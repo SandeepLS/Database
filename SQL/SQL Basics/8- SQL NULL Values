@@ -1,0 +1,30 @@
+Def:-A field with a NULL value, is a field with no value.
+Note: A NULL value is different from a zero value.
+
+How to Test for NULL Values?
+It is not possible to test for NULL values with comparison operators, such as =, <, or <>.
+We will have to use the IS NULL and IS NOT NULL operators instead.
+
+1)IS NULL:- The IS NULL operator, is used to test for empty values (NULL values).
+Syntax:-
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+
+Ex:-
+SELECT CustomerName, Price
+FROM Customers
+WHERE CustomerName IS NULL;
+
+Tip: Always use IS NULL to look for NULL values.
+-----------------------------------------------------------------------------------------------------------------------
+2)IS NOT NULL:- The IS NOT NULL operator, is used to test for non-empty values(NOT NULL values).
+Syntac:-
+SELECT column_names
+FROM table_name
+WHERE column_name IS NOT NULL;
+
+Ex:-
+SELECT CustomerName, Price
+FROM Customers
+WHERE Price IS NOT NULL;
