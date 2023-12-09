@@ -1,0 +1,22 @@
+Def:-The UPDATE statement is used to, modify the existing record in a table.
+Synatx:-
+UPDATE table_name
+SET column1=value1, column2=value2..
+WHERE condition;
+
+Ex:-Single record updated.
+UPDATE Customers
+SET CustomerName='srinivas', City='Lakkavalli'
+WHERE CustomerID = 1;
+
+Ex2:-Multiple recorde updated.
+UPDATE Customers
+SET CustomerName = 'vanjakshi'
+WHERE City = 'Chickmangalore';
+
+Note:- Be careful when updating records. If you omit the WHERE clause, ALL records will be updated!
+Ex:-
+UPDATE Customers
+SET CustomerName = 'Manjula';
+
+
