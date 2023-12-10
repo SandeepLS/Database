@@ -1,0 +1,10 @@
+Def:-is used to delete existing record in a table.
+Syntax:- DELETE FROM table_name WHERE consition;
+Ex:- DELETE FROM Customers WHERE CustomerName = 'Sandeep';
+
+Delete All Record:- Delete all rows/record in the Customer table.
+Ex:- DELETE FROM Customer;
+
+Delete a Table:- Delete the Complete table, use the DROP TABLE statement.
+Ex:- DROP TABLE Customers;
+
