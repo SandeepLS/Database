@@ -1,0 +1,29 @@
+1)Def:-
+  The MIN() function, returns the smallest value of the selected column.
+  The MAX() function, returns the largest value of the selected column.
+  
+  Syntax:-Min()/Max()
+  SELECT Min(coloumn_name)/Max(column_name)
+  FROM table_name
+  WHERE condition;
+  
+  Ex:- Find the lowest Price
+  SELECT Min(Price)
+  From Products;
+  
+  Ex:- Find the largest price
+  SELECT Max(price)
+  FROM Products;
+
+2)Set Column Name (Alias)
+  When you use MIN() or MAX(), the returned column will be named MIN(field) or MAX(field) by default. To give the column a new name, use the AS keyword:
+  Example:-
+  SELECT MIN(Price) AS SmallestPrice
+  FROM Products;
+
+  O/P:-
+  SmallestPrice
+  2.5 
+
+
+
