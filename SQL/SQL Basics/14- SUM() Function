@@ -1,0 +1,34 @@
+1)SUM():- It returns the total number of numeric columns.
+  Syntax:-
+  SELECT SUM(column_name)
+  FROM table_name
+  WHERE condition;
+  
+  Ex:-Return the sum of all Quantity fields in the OrderDetails table:
+  SELECT SUM(Quantity)
+  FROM OrderDetails;
+  
+  Ex:-Add a Where Clause:-
+  Return the number of orders made for the product with ProductID 11:
+  SELECT SUM(Quantity)
+  FROM OrderDetails
+  WHERE ProductID = 11;
+  
+  Ex:-Use an Alias
+  SELECT SUM(Quantity) AS total
+  FROM OrderDetails;
+  
+  Ex:-SUM() With an Expression
+  SELECT SUM(Quantity * 10)
+  FROM OrderDetails;
+  
+  Ex:-We can also join the OrderDetails table to the Products table to find the actual amount, instead of assuming it is 10 dollars:
+  Join OrderDetails with Products, and use SUM() to find the total amount:
+  SELECT SUM(Price * Quantity)
+  FROM OrderDetails
+  LEFT JOIN Products
+  ON OrderDetails.ProductID = Products.ProductID;
+
+
+
+
