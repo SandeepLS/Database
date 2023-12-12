@@ -1,0 +1,27 @@
+Def:-The COUNT() function returns the number of rows, that matches a specified criterion.
+Syntax:-
+SELECT COUNT(column-name)
+FROM table_name
+WHERE condition;
+
+Ex:-Find the total number of products in the Products table:
+SELECT COUNT(*)
+FROM Products;
+
+Ex:-Find the number of products where Price is higher than 20:
+SELECT COUNT(ProductID)
+FROM Products
+WHERE Price > 20;
+
+Ex:-Specify Column
+SELECT COUNT(ProductName)
+FROM Products;
+
+Ex:-Ignore Duplicates
+SELECT COUNT(DISTINCT Price)
+FROM Products;
+
+Ex:-Use an Alias(Given the column_name By using AS Keyword).
+SELECT COUNT(*) AS [number of records]
+FROM Products;
+
