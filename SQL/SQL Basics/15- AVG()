@@ -1,0 +1,22 @@
+Def:- AVG() function returns the, average value of a numeric column.
+Syntax:-
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+Ex:-
+SELECT AVG(Price)
+FROM Products;
+
+Ex:-Where condition.
+SELECT AVG(Price)
+FROM Products
+WHERE CategoryID=1;
+
+Ex:-Use an Alias
+SELECT AVG(Price) AS [average price]
+FROM Products;
+
+Ex:-Higher Than Average, To list all records with a higher price than average
+SELECT * FROM Products
+WHERE Price > (SELECT AVG(Price) FROM Products);
