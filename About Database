@@ -19,3 +19,27 @@ There are several different types of Relational database:-The most imp is:-
 4)PostgreSQL
 
 RoadMap:-https://techtfq.com/blog/how-to-learn-sql-for-free-roadmap-to-learning-sql
+
+Relational V/S Non-Relational database:-
+(a)Relational DB:-
+    A relational database/RDMS, stores information in tables.
+    Often, thes tables have share information b/w them, causing a relationship to from between tables.
+    Each table, will have a column, that must have unique values- known as the primary key.
+  
+    Adv:-                              Div:-
+    ACID compliance                    Scalability
+    Data accuracy                      Flexibility
+    Normalization                      Performance
+    Simplicity
+
+(b)Non-Relational DB:-
+    Non-relational DB, some time we called NoSQL.
+    is any kind of data, does not use the tables, rows & column structure data concept, from relational database.
+    It making them great at, Horizontal Scaling.
+  
+    There are a few different groups of database types that store the data in different ways:-
+    Document DB
+    Key-Value DB
+    Graph DB
+    Wide-column DB
+
