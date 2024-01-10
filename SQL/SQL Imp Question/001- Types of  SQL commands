@@ -1,0 +1,22 @@
+Types:-
+1)DDL:-Data Defination Language
+  Create
+  Alter
+  Truncate
+  Drop
+
+2)DML:-Data Manipulation Language
+  Insert
+  Select
+  Update
+  Delete
+
+3)DCL:-Data Control Language
+  Grant
+  Revoke
+
+4)TCL:-
+  Commit
+  RollBack
+  Savepoint
+
