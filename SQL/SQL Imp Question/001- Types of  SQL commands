@@ -1,21 +1,56 @@
-Types:-
+Types:-https://www.javatpoint.com/dbms-sql-command
 1)DDL:-Data Defination Language
-  Create
-  Alter
-  Truncate
-  Drop
+  Create:- It is used to create new table, in a Database.
+           Syntax:- create table table_name(column_name data_types,...);
+           Ex:-
+          create table Customers(
+          CustomerID int primary key,
+          CustomerName varchar(225),
+          CustomerLN varchar(22),
+          DOB DATE,
+          City varchar(30),
+          Country varchar(30),
+          PostalCode varchar(30)
+          );
 
+  Alter:-Is used to, alter the Structure of the Database.
+         It could be, either to modify the characterstics of an existing attribute.-
+         or Probably add new attribute.
+         Syntax:-
+         ALTER TABLE table_name ADD column_name data_type;
+         ALTER TABLE table_name MODIFY column_name data-type;
+         Ex:-
+         ALTER TABLE Customers ADD Email varchar(233);
+         ALTER TABLE Customers MODIFY Name varchar(20);
+
+  Truncate:-is used to delete all the rows from the Table.
+          Syntax:- TRUNCATE TABLE table_name;
+          Ex: TRUNCATE TABLE Customers;
+
+  Drop:-is used to delete both the structure & record in a Table.Means delete entire table
+        OR is used to drop an existing table an DataBase.
+        Syntax:- DROP TABLE table_name;
+        Ex:- DROP TABLE Customers;
+        
 2)DML:-Data Manipulation Language
-  Insert
-  Select
-  Update
-  Delete
+  Insert:-is used to insert data into a table.
+          Ex:INSERT INTO Customers VALUES(101, 'Sandeep','LS'.'BNG','IND',23123);
+
+  Select:-
+  Update:-this command is used to Update OR Modify the values, of a Column in a Table.
+          Ex: UPDATE Customers
+              SET Price = '12'
+              WHERE CustomerID=101;
+
+  Delete:- is used to Delete 1 specific row in a table.
+           Ex:DELETE FROM Customer WHERE CustomerID=101;
+
 
 3)DCL:-Data Control Language
   Grant
   Revoke
 
-4)TCL:-
+4)TCL:-Transaction control language
   Commit
   RollBack
   Savepoint
