@@ -1,0 +1,5 @@
+ACID:-
+Atomocity: The entire transaction Take place at once, or doesn't happen at all.
+Consistency: The database must be consist, before & after the transaction.
+Isolation: Multiple transaction occur independently, without interface.
+Durability: is ensure that commited changes are permanent.
