@@ -47,11 +47,24 @@ Types:-https://www.javatpoint.com/dbms-sql-command
 
 
 3)DCL:-Data Control Language
-  Grant
-  Revoke
+  Grant:-It is used to give user access privileges to a database.
+         Ex:-GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOTHER_USER;
+
+  Revoke:-It is used to take back permissions from the user.
+          Ex:-REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2;
 
 4)TCL:-Transaction control language
-  Commit
-  RollBack
-  Savepoint
+  Commit:-Is used to save all transaction to the database.
+          Ex:COMMIT;
+
+  RollBack:-is used to undo transactions, that have not already been saved to the database.
+            Ex:ROLLBACK;
+
+  Savepoint:-is used to roll the transaction, to a certain point, without rollback the entire transaction.
+             Ex:SAVEPOINT SAVEPOINT_NAME;
+
+5)DQL:-Data Query Language
+  Select:-It is used to describe the specific record.
+          Ex:SELECT * FROMCustomers;
+
 
