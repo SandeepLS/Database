@@ -1,0 +1,19 @@
+How do you find duplicates in a table?
+Ans:-Use the GROUP BY and HAVING clauses to identify and eliminate duplicates.
+
+What is a primary key and foreign key?
+Ans:A primary key is a unique identifier for a table, while a foreign key establishes a relationship between two tables.
+
+How to perform a backup and restore in SQL? 
+Ans:Use the BACKUP and RESTORE commands to create and restore database backups.
+
+What is a subquery?
+Ans:A subquery is a query within another query, and is used to retrieve data based on certain conditions.
+
+How to update data in a table?
+Ans:Use the UPDATE statement with the SET clause to modify data in a table.
+
+What is normalization in SQL? 
+Normalization is the process of organizing data in a database, to eliminate redundancy and improve data integrity.
+
+
