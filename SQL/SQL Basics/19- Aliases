@@ -1,0 +1,45 @@
+Aliases:-are give a temporary name, to Table/Column.
+Alise aften used, to make column name, more readable.
+Ex:-
+SELECT CustomerID AS ID
+FROM Customers;
+
+Ex:-AS in option
+SELECT CustomerID ID
+FROM Customers;
+
+Syntax:-
+When alias is used on column:
+SELECT column_name AS alias_name
+FROM table_name;
+
+When alias is used on table:
+SELECT column_name(s)
+FROM table_name AS alias_name;
+
+Ex1:-Alise for Column
+SELECT CustomerID AS ID, CustomerName AS Name
+FROM Customers;
+
+Ex2:-Using Alise in a space character
+SELECT CustomerID AS [Display ID Numbers]
+FROM Customers;
+OR
+SELECT CustomerID AS "Display ID Numbers*
+FROM Customers;
+
+Ex3:-Concatenate Column
+SELECT CustomerName, Address +','+PostalCode+','+City+','+','+Country AS Address
+FROM Customers;
+OR
+SELECT CustomerName, CONCAT(Address,', ',PostalCode,', ',City,', ',Country) AS Address  //MySQL
+FROM Customers;
+
+Ex4:-Alise for Table
+SELECT * FROM Customers AS Persons;
+
+Ex5:-Combile two tables:
+SELECT o.OrderID, o.OrderDate, c.CustomerName
+FROM Customers AS c, Orders AS o
+WHERE CustomerName='Around the Horn' AND c.CustomerID=o.CustomerID;
+
