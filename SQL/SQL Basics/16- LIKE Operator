@@ -12,7 +12,7 @@ SELECT *
 FROM Customers
 WHERE CustomerName LIKE 'a%';
 
-1)The _ Wildcard:-
+1)The _ Wildcard:-A wildcard character is used to substitute one or more characters in a string.
 The _ wildcard represents a single character.
 It can be any character or number, but each _ represents one, and only one, character.
 Ex:- Return all customers from a city that starts with 'L' followed by one wildcard character, then 'nd' and then two wildcard characters.
