@@ -3,17 +3,17 @@ JOINS:-is used to combine row from two or more table, Based on related column be
         Orders:-
         OrderID	CustomerID	OrderDate
         10308	    2	        1996-09-18
-        10309	    37	      1996-09-19
-        10310	    77	      1996-09-20
+        10309	    37	        1996-09-19
+        10310	    77	        1996-09-20
         
         Customers:-
         CustomerID	      CustomerName	        ContactName	    Country
-          1	        Alfreds Futterkiste	        Maria Anders	   Germany
-          2	        Ana Trujillo Emparedados	  Ana Trujillo	   Mexico
-          3	        A ntonio Moreno Taquería	  Antonio Moreno	   Mexico
+          1	        Alfreds Futterkiste	        Maria Anders	    Germany
+          2	        Ana Trujillo Emparedados	Ana Trujillo	    Mexico
+          3	        A ntonio Moreno Taquería	Antonio Moreno      Mexico
         
         Result:-
-        SELECT Orders.OrderID, Customers.CustomerID, Orders.OrderID
+        SELECT Orders.OrderID, Customers.CustomerID, Orders.OrderDate
         FROM Orders
         INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
 
