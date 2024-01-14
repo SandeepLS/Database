@@ -1,0 +1,15 @@
+LEFT Joins:- returns all record from the left table, and the matching record from the right table.
+Syntax:
+SELECT column_name(s)
+FROM table_1
+LEFT JOIN table_2
+ON table_1.columnName = table_2.columnName;
+
+Ex:
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+Note:- The above ex print all data from LeftTable(CustoerName). & the matching values in rightTbale(Orders(CustomerID)).
