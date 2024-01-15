@@ -23,7 +23,8 @@ ORDER BY COUNT(CustomerID) DESC;
 
 Ex:GROUP BY With JOIN Example
 The following SQL statement lists the number of orders sent by each shipper.
-SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
-LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders
+FROM Orders
+LEFT JOIN Shippers ON Shippers.ShipperID = Orders.ShipperID
 GROUP BY ShipperName;
 
