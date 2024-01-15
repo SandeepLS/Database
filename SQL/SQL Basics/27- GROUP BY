@@ -1,0 +1,29 @@
+Group By:statement groups rows, that have the same values inti summary rows. 
+like, Finding the number of Customers in each Country.
+Group By, statement often used with aggregte functions(COUNT(), MAX(), MIN(), SUM(), AVG())to group the result-set-
+by one or more column.
+
+Syntax:
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+
+Ex:The following SQL statement lists the number of customers in each country:
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;
+
+Ex:The following SQL statement lists the number of customers in each country, sorted high to low:
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+ORDER BY COUNT(CustomerID) DESC;
+
+Ex:GROUP BY With JOIN Example
+The following SQL statement lists the number of orders sent by each shipper.
+SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
+LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+GROUP BY ShipperName;
+
