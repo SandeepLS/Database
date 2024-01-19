@@ -1,0 +1,33 @@
+What is normalization in SQL? 
+Normalization is technique of organizing data in a database, to eliminate redundancy and improve data integrity.
+It is multi-step process, that puts data nto tabuler form. Removing the duplicate data from its relational tabel.
+
+Normalization is used mainly two purpose:-
+-It is used to eliminate repeated data.
+-to ensure the data dependencies, make some logical sense.
+
+Anomalies:- if tabel is not properly normalized.
+-Insertion, Update & Deletion anomaly.
+
+Types:-
+(A)1st Normal form:-
+Removes repeting groups from the tabel.
+Create a seperate tabel, for each set of Related data.
+Identify each set of Related data, with a Primary key.
+It state that, the domain of attributes, Must include atomic values(Simple, Indivisible).
+
+(B)2nd Normal form:-
+Tabel should not have Partial Dependency-
+Means, the non-prime attribute, is functionally dependent, on part of Composit key.
+
+(C)3rd Normal form:-
+There should be no Transitive dependency.-
+Means, Non-prime attribute must be dependent on, other non-prime attributes.
+Ex:-StudentName, StudentID, SubjectID, Subject, Address:-
+StudentID, is dependent on StudentName, SubID & Address.But
+SubjectID is only dependent on SubjectName.
+
+(D)BCN:-Boyce Code Normal Form
+Every functional dependency A->B, then A has to be the Super key, of that particular tabel.
+Super key: is a group of, singel or multiple keys, Which identifies rows in a tabel.
+
