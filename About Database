@@ -43,3 +43,9 @@ Relational V/S Non-Relational database:-
     Graph DB
     Wide-column DB
 
+In comparision to the sql server, MongoDB is faster & more scalable.
+The sql server does not accommodate, large amount of data, However MongoDB does.
+
+API: is an abbrevation for application programing language.
+It is a collection of Communication protocals & Subroutines.
+
