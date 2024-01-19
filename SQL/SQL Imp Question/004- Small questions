@@ -16,4 +16,18 @@ Ans:Use the UPDATE statement with the SET clause to modify data in a table.
 What is normalization in SQL? 
 Normalization is the process of organizing data in a database, to eliminate redundancy and improve data integrity.
 
+What is Trigger:-
+It allows application developers, to plug in rules,
+for When & How often, a take should be run. & it is absolute date-time.
+
+What is cross Join:-
+It returns all record form both table. &
+it can Potntially return very-large result-set.
+Ex:
+SELECT column_name(s)
+FROM table1
+CROSS JOIN table2;
+
+
+
 
