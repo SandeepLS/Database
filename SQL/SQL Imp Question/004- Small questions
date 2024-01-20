@@ -28,6 +28,8 @@ SELECT column_name(s)
 FROM table1
 CROSS JOIN table2;
 
+View:- view is a virtual table based on the result-set of an SQL statement.
 
+Injection:- is a code injection technique, that might be destroy our database.
 
 
