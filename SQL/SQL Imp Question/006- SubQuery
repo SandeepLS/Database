@@ -1,0 +1,22 @@
+Subquery:-is a query, which can be nested into main query.
+Types:-
+(A)Single row SQ:-
+  If the sub-query returns, exactly one record OR value-
+  then it is known as single row sub-query.
+  Ex:
+  SELECT name, salary, deptID
+  FROM Employee
+  WHERE salary = (SELECT MIN(salary) FROM Employee);
+
+(B)Multiple row SQ:-
+  If the sub-query returns, more then one record OR values-
+  then it is known as Multiple row SQ.
+  Ex:
+  SELECT name, deptID
+  FROM Employee
+  WHERE deptID IN (SELECT deptID
+                   FROM Department
+                   WHERE locationID = 100);
+
+(C)Correlated Sub Query:-
+As opposed to a regular subquery
