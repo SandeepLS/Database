@@ -61,3 +61,7 @@ There are 5 types:-
         FirstName varchar(255),
         Age int CHECK (Age>=18)
     );
+
+(F)INDEX - Indexes a field providing, faster retrieval of records.
+
+(G)DEFAULT - Automatically assigns a default value, if no value has been specified for the field.
