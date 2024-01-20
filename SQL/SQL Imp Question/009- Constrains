@@ -1,0 +1,63 @@
+Constrains:-are used to Specify rules, for data in a tabel.
+There are 5 types:-
+(A)NOT NULL:- Ensure that, a column can_not have a NULL value.
+    Ex:We can add NOT NULL, while creating a tabel.
+    CREATE TABLE Persons (
+        ID int NOT NULL,
+        LastName varchar(255) NOT NULL,
+        FirstName varchar(255) NOT NULL,
+        Age int
+    );
+    
+    Ex:To create a NOT NULL constraint on the "Age" column.
+    ALTER TABLE Persons
+    ALTER COLUMN Age int NOT NULL;
+
+(B)UNIQUE:- Ensure that, all values in a column, are different.
+    Ex:
+    CREATE TABLE Persons (
+        ID int NOT NULL UNIQUE,
+        LastName varchar(255) NOT NULL,
+        FirstName varchar(255),
+        Age int
+    );
+    
+    Ex:To create a UNIQUE constraint on the "ID" column when the table is already created,
+    ALTER TABLE Persons
+    ADD UNIQUE (ID);
+
+(C)Primary Key:- A combination of NOT NULL and UNIQUE, uniquely identifies each row in a tabel.
+    Ex:
+    CREATE TABLE Persons (
+        ID int NOT NULL,
+        LastName varchar(255) NOT NULL,
+        FirstName varchar(255),
+        Age int,
+        PRIMARY KEY (ID)
+    );
+    
+    Ex:
+    ALTER TABLE Persons
+    ADD PRIMARY KEY (ID);
+
+(D)FOREGIN KEY:- Prevent actions, that would destroy links between tabels.
+    That refers to the PRIMARY KEY in another table.
+    Ex:
+    CREATE TABLE Orders (
+        OrderID int NOT NULL PRIMARY KEY,
+        OrderNumber int NOT NULL,
+        PersonID int FOREIGN KEY REFERENCES Persons(PersonID)
+    );
+    
+    Ex:
+    ALTER TABLE Orders
+    ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+
+(E)CHECK: Ensure that, the value in a column, satisfies a specific condition.
+    Ex:
+    CREATE TABLE Persons (
+        ID int NOT NULL,
+        LastName varchar(255) NOT NULL,
+        FirstName varchar(255),
+        Age int CHECK (Age>=18)
+    );
