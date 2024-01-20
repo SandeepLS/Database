@@ -6,28 +6,49 @@ Normalization is used mainly two purpose:-
 -It is used to eliminate repeated data.
 -to ensure the data dependencies, make some logical sense.
 
-Anomalies:- if tabel is not properly normalized.
+Anomalies:- Multiple values in a single column(if tabel is not properly normalized).
 -Insertion, Update & Deletion anomaly.
 
 Types:-
 (A)1st Normal form:-
-Removes repeting groups from the tabel.
+Removes repeting values from the tabel.
 Create a seperate tabel, for each set of Related data.
 Identify each set of Related data, with a Primary key.
 It state that, the domain of attributes, Must include atomic values(Simple, Indivisible).
 
 (B)2nd Normal form:-
-Tabel should not have Partial Dependency-
+Tabel should not have, Partial Dependency-
 Means, the non-prime attribute, is functionally dependent, on part of Composit key.
+A composite key is made by, the combination of two or more columns in a table.
+Ex:-empID, depID, office location
+this tabel has a composite primary-key, that is empID, depID.(It is a part of Primary-Key).
+The non-key attribute is officeLocation. In this case officeLocation is only dependent on depID.-
+(Which is the only power of Primary-Key)
+Ans:we need to break th tabel in two part
+->empID, depID
+->depID, officeLocation
 
 (C)3rd Normal form:-
-There should be no Transitive dependency.-
+Tabel should not have, Transitive dependency.-
 Means, Non-prime attribute must be dependent on, other non-prime attributes.
-Ex:-StudentName, StudentID, SubjectID, Subject, Address:-
-StudentID, is dependent on StudentName, SubID & Address.But
+Ex:-StudentName, StudentID, SubjectID, SubjectName, Address:- 
+StudentID determins SubjectID & SubjectID determins SubjectName. Therefore StudentID determins SubjectName Via SubjectID,
+this implies Functional transitive dependency.
+StudentID, is dependent on StudentName, SubjectID & Address.But
 SubjectID is only dependent on SubjectName.
 
 (D)BCN:-Boyce Code Normal Form
 Every functional dependency A->B, then A has to be the Super key, of that particular tabel.
 Super key: is a group of, singel or multiple keys, Which identifies rows in a tabel.
+Ex: StudentID, Subject, Professor
+One student can enroll, for multiple subject,
+there can be multiple professor, teaching one subject. this is the tabel.
+All the NF are stisfied, excepted BFC.
+StudentID & Subject from the primary-key, Which means, Subject column is prime-attribute.
+But one more dependency-> Professor, is depending on Subject.
+the subject is prime-attribute, & Professor is non-prime attribute, this is not allowed in BFC.
+
+Creating new column, that is professorID:-
+StudentID, ProfessorID
+ProfessorID, Subject, Professor
 
