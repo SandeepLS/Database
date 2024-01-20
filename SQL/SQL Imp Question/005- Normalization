@@ -5,6 +5,8 @@ It is multi-step process, that puts data nto tabuler form. Removing the duplicat
 Data Integrity is the assurance of accuracy and consistency of data.
 A query is a request for data or information from a database table.   
 
+Denormalization:-is the process of adding Redundent data.
+
 Normalization is used mainly two purpose:-
 -It is used to eliminate repeated data.
 -to ensure the data dependencies, make some logical sense.
