@@ -1,6 +1,22 @@
 Database:- is a organized collection of data. it is collection of tables, queries, reports, view and other object.
 Ex:- Airline Booking Data.
 
+DBMS:-
+-DBMS stores data as File.
+-Normalization is not present in DBMS
+-It does-not support Distributed data.
+-EX;XML
+
+RDBMS:-
+-RDBMS stores data, in Tabular form.
+-Normalization is present.
+-It support Distributed data.
+-Ex:MySQL, ms-acess, SQL server, Orcle, PostgreSQL.
+
+Distributed DB:-represent multiple interconnected database, spred out across, several sites connected by network.
+    -Homogenous databases allow users to access data from each of the databases
+    -Heterogeneous a particular site can be completely unaware, of other sites
+
 What can we stor in Database:- text, number, picture.
 
 Learn:- https://www.integrate.io/blog/the-sql-vs-nosql-difference/#two
@@ -23,6 +39,8 @@ RoadMap:-https://techtfq.com/blog/how-to-learn-sql-for-free-roadmap-to-learning-
 Relational V/S Non-Relational database:-
 (a)Relational DB:-
     A relational database/RDMS, stores information in tables.
+    It support SQL query language.
+    It not suitable for Hierarchical data storage.
     Often, thes tables have share information b/w them, causing a relationship to from between tables.
     Each table, will have a column, that must have unique values- known as the primary key.
   
@@ -36,6 +54,8 @@ Relational V/S Non-Relational database:-
     Non-relational DB, some time we called NoSQL.
     is any kind of data, does not use the tables, rows & column structure data concept, from relational database.
     It making them great at, Horizontal Scaling.
+    It support JSON query language.
+    It is suitable for Hierarchical data storage.
   
     There are a few different groups of database types that store the data in different ways:-
     Document DB
