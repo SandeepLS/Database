@@ -29,7 +29,15 @@ FROM table1
 CROSS JOIN table2;
 
 View:- view is a virtual table based on the result-set of an SQL statement.
+      -View can hide complexity.
+      -View can be used as a Security mechanisam.
 
 Injection:- is a code injection technique, that might be destroy our database.
+
+List & Tuple:-
+-List is Mutable, Where as Tuple is Immutable.
+-It prepresent with [], Where as tuple ().
+-List is Slower, Where as Tuple is faster then List. 
+
 
 
