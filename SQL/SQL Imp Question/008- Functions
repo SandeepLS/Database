@@ -1,0 +1,26 @@
+Functions:-set of instruction, used to do somespecific task.
+(i)Single row functions:-
+  It takes n number of input, & produce n number of Output.
+  Types:-
+  (A)String Function:-
+  It takes one or more charater value as parmeters, & returns other character/Number values. 
+  Its devide several functions.
+  =>Upper, Lower, Length, Repeat, Replace, Substr, Instr
+  
+  (B)Numeric:-are used in subQuery.
+  There are 6 types of NF.
+  =>ABS, RAND, MAX, MIN
+  
+  (C)DATE: It returns a 
+  =>Add_months(arg1, arg2), Last_day(arg1), Month_between(arg1, arg2).
+  
+  (D)Special Function:- It returns 2 types
+  =>To_char- It is used to change the default formate of date.
+  =>Null_value_logic- It substitutes a value for null
+
+(ii)Multi_row/Group/Aggregate function:-
+It takes n number of I/P at one shot, & produce one single O/P.
+Types:-
+->Min, Max, Avg, Sum, Count
+
+
