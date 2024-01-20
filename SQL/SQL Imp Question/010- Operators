@@ -1,12 +1,16 @@
 Operators:- There are 5 types of Operators.
-(A)Arithmetic Operators:-
-  =>Add, Sub, Mul, Divids, Modulo
+  (A)Arithmetic Operators:-
+    =>Add, Sub, Mul, Divids, Modulo
+  
+  (B)Bitwise Operators:-
+    => Equal to, Greter than, Less than, Greter tha/ Equal to, Less than/ Equal to, Not equal to(<>).
+  
+  (C)Compound Operators:-
+    =>Add equals, Sub equals, Mul equals, Divids equals, Modulo equals, Bitwise AND equals(&=).
+  
+  (D)Logical Operators:-
+    =>ALL, AND, ANY, Between, IN, LIKE, NOT.
 
-(B)Bitwise Operators:-
-  => Equal to, Greter than, Less than, Greter tha/ Equal to, Less than/ Equal to, Not equal to(<>).
-
-(C)Compound Operators:-
-  =>Add equals, Sub equals, Mul equals, Divids equals, Modulo equals, Bitwise AND equals(&=).
-
-(D)Logical Operators:-
-  =>ALL, AND, ANY, Between, IN, LIKE, NOT.
+DataTypes:-
+Char: A FIXED length string (can contain letters, numbers, and special characters).
+Varchar:A VARIABLE length string (can contain letters, numbers, and special characters).
