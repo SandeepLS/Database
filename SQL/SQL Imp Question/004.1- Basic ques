@@ -1,9 +1,13 @@
 1)Five commands in sql:-
 a)Show: It check the default Page & Line size.
   Ex:Show pages, Show lines
+
 b)Set: It is used to change the length of Page & Line size.
   Ex:Set pages 200;
+
 c)clrscr(Clear_Screen): We get the fresh page.
+
 d)DESC(description): To check the  column records, Based on each & every tabel.
   Ex:desc tabel_name;
+
 e)ED:It make changes, inside our query.
