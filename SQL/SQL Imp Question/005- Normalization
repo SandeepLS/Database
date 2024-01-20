@@ -2,6 +2,9 @@ What is normalization in SQL?
 Normalization is technique of organizing data in a database, to eliminate redundancy and improve data integrity.
 It is multi-step process, that puts data nto tabuler form. Removing the duplicate data from its relational tabel.
 
+Data Integrity is the assurance of accuracy and consistency of data.
+A query is a request for data or information from a database table.   
+
 Normalization is used mainly two purpose:-
 -It is used to eliminate repeated data.
 -to ensure the data dependencies, make some logical sense.
