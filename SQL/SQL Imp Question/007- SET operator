@@ -1,0 +1,27 @@
+SET opertor:-are a special type of operators,
+Which can be used to combine, the result of two queries.
+
+There are 4 types:-
+(A)UNION:-
+Which can be used to combine, the result of two statement.
+Duplicate rows will be eliminated, from the result.
+Ex:
+SELECT * FROM t_employee UNION
+SELECT * FROM t2_employee;
+
+(B)UNION ALL:-
+Which can be used to combine, all records from both statement.
+Duplicate rows will not be eliminated, from the result.
+Ex:
+SELECT *FROM t_employees UNION ALL SELECT *FROM t2_employees;  
+
+(C)INTERSECT:-
+It only returns the record, Which are common, from both statement.
+Ex:
+SELECT *FROM t_employees INTERSECT SELECT *FROM t2_employees;  
+
+(D)MINUS:-
+It display the row, which are present in the first query. But
+absent in the second query, with no duplicates.
+Ex:
+SELECT *FROM t_employees MINUS SELECT *FROM t2_employees;  
