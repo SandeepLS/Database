@@ -63,6 +63,10 @@ Relational V/S Non-Relational database:-
     Graph DB
     Wide-column DB
 
+Difference:
+SQL is primarily used to query and operate database systems.
+MySQL allows you to handle, store, modify delete data and store data in an organized way.
+
 In comparision to the sql server, MongoDB is faster & more scalable.
 The sql server does not accommodate, large amount of data, However MongoDB does.
 
