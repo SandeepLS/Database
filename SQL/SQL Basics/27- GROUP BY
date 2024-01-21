@@ -1,4 +1,4 @@
-Group By:statement groups rows, that have the same values inti summary rows. 
+Group By:statement groups rows, that have the same values, into summary rows. 
 like, Finding the number of Customers in each Country.
 Group By, statement often used with aggregte functions(COUNT(), MAX(), MIN(), SUM(), AVG())to group the result-set-
 by one or more column.
