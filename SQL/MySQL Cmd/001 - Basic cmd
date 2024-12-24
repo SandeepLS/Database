@@ -1,0 +1,95 @@
+Check version: mysql --version
+
+Enter into mysql: mysql -u root -p
+
+List of DB: show databases;
+
+create DB:- create database india;
+            use india;
+
+Create Table:-
+CREATE TABLE EMPLOYEE (
+    EmpID int NOT NULL,
+    FirstName varchar(229),
+    LastName varchar(229),
+    EmpAge int,
+    EmpZone varchar(229),
+    UNIQUE(EmpID)          --It set as PrimaryKey
+    ); 
+
+List of tables:- show tables;
+
+Dscribe the table:-  DESC EMPLOYEE;
+
+Insert values:-
+INSERT INTO EMPLOYEE(EmpID, FirstName, LastName, EmpAge, EmpZone) VALUES (01, 'Sandeep', 'LS', 24, 'NorthBNG');
+
+Display values:-
+select * from EMPLOYEE;
+select EmpID from EMPLOYEE;  --list particuler attributes
+
+----------------------------------------------------------------------------------------
+1) NOTNULL Constrains: It can not have the null value.
+   CREATE TABLE EMPLOYEE (
+      EmpID int NOT NULL,
+      FirstName varchar(229),
+      LastName varchar(229),
+      EmpAge int,
+      EmpZone varchar(229)
+    );   
+  DESC EMPLOYEE;
+
+2) UNIQUE Constrains: Ensure that, all the values in a column are different.
+   CREATE TABLE EMPLOYEE (
+        EmpID int NOT NULL,
+        FirstName varchar(229),
+        LastName varchar(229),
+        EmpAge int,
+        EmpZone varchar(229),
+        UNIQUE(EmpID)          --It set as PrimaryKey
+      ); 
+  DESC EMPLOYEE;
+
+3) PRIMARY KEY: is used to, Uniquely identify each row in a table.
+ CREATE TABLE EMPLOYEE (
+        EmpID int NOT NULL,
+        FirstName varchar(229),
+        LastName varchar(229),
+        EmpAge int,
+        EmpZone varchar(229),
+        PRIMARY KEY (EmpID)          --It set as PrimaryKey
+      ); 
+  DESC EMPLOYEE;
+
+4) CHECK Constrains:- We set the condition.
+    CREATE TABLE EMPLOYEE (
+        EmpID int NOT NULL,
+        FirstName varchar(229),
+        LastName varchar(229),
+        EmpAge int,
+        EmpZone varchar(229),
+        CHECK(EmpAge>20)    --While inserting records, EmpAge must be GreterThen 20. orElse you will get error.
+        ); 
+  DESC EMPLOYEE;
+
+5) DEFAULT Constrains:- basically used to, provide default value for a column,-
+   DEFAULT value gets added to a record, if no other value specified by the user.
+   Ex: All employess are working in Operation team, so we set EmpDep DEFAULT 'Operations'.
+   CREATE TABLE EMPLOYEE (
+          EmpID int NOT NULL,
+          FirstName varchar(229),
+          LastName varchar(229),
+          EmpAge int,
+          EmpDep varchar(229) DEFAULT 'Operations'
+        ); 
+    DESC EMPLOYEE;
+
+6) INDEX Constrains:- 59:00s
+  It's creating Indexs, Basically we used to retrive record from the database, quickly then any other method.
+  
+  CREATE INDEX DEMOINDEX ON EMPLOYEE(FirstName);
+  CREATE INDEX DEMOINDEX2 ON EMPLOYEE(FirstName, LastName, EmpZone);
+  SHOW INDEXES FROM EMPLOYEE;
+  DROP INDEX DEMOINDEX ON EMPLOYEE;
+  SHOW INDEXES FROM EMPLOYEE;
+
