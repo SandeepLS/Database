@@ -44,5 +44,24 @@ CREATE TABLE Screen (
     FOREIGN KEY (MovieID) REFERENCES Movie(MovieID)
     );
 
--- Describe table
+-- Customer Table
+ CREATE TABLE Customer (
+    CustomerID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    PhoneNumber VARCHAR(20) NOT NULL UNIQUE
+    );
+
+-- Booking Table
+ CREATE TABLE Booking (
+     BookingID INT PRIMARY KEY AUTO_INCREMENT,
+     ShowID INT NOT NULL,
+     CustomerID INT NOT NULL,
+     SeatNumber VARCHAR(10) NOT NULL,
+     FOREIGN KEY (ShowID) REFERENCES MovieShow(ShowID),
+     FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+     > );
+
+
+-- Describe tables
 > DESC TableName;
