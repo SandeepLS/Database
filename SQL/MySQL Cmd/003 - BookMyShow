@@ -60,8 +60,32 @@ CREATE TABLE Screen (
      SeatNumber VARCHAR(10) NOT NULL,
      FOREIGN KEY (ShowID) REFERENCES MovieShow(ShowID),
      FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
-     > );
-
+     );
 
 -- Describe tables
 > DESC TableName;
+
+-------------------------------------------------------------------------------
+-- Insert Values
+-- Theatre Table
+INSERT INTO Theatre (Name, Location) VALUES
+    ('PVR Nexus', 'Form Mall, Bangalore'),
+    ('Carnival Cinemas', 'Mantri Square Mall, Bangalore'),
+    ('Cinepolis', 'VR Mall Whitefield, Bangalore'),
+    ('Masala Cinemas', 'Phoenix City Mall, Whitefield, Bangalore'),
+    ('The Grand', 'Forum Mall, Whitefield, Bangalore'),
+    ('Wonderland Cinemas', 'Phoenix City Mall, Whitefield, Bangalore'),
+    ('INOX-Nexus', 'The Forum Neighbourhood Mall, Bangalore');
+
+-- Movie
+INSERT INTO Movie (Title, Language, Genre, Duration) VALUES
+    ('Dasara', 'Telugu', 'Action', 156),
+    ('Dhoom', 'Hindi', 'Action', 145),
+    ('UI', 'Kannada', 'socio-political issues', 145),
+    ('KGF', 'Kannada','Action', 160),
+    ('RRR', 'Thelugu','Epic-Historical-Action Drama', 160),
+    ('Avatar: The Way of Water', 'English', 'Sci-Fi', 192),
+    ('Tu Jhoothi Main Makkar', 'Hindi', 'Romantic Comedy', 159);
+
+-- List all table records.
+> select * from TableName;
