@@ -1,0 +1,52 @@
+-- 1. Create the Parent Table:
+-- The parent table contains the primary key or unique key
+CREATE TABLE parent_table (
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR(100)
+);
+
+-- 2. Create the Child Table with a Foreign Key: 
+-- The child table references the primary key of the parent table.
+CREATE TABLE child_table (
+    child_id INT NOT NULL PRIMARY KEY,
+    parent_id INT,
+    description VARCHAR(255),
+    FOREIGN KEY (parent_id) REFERENCES parent_table(id)
+);
+
+
+-- Foreign Key Constraints
+You can define actions that should happen when the parent row is updated or deleted:
+> ON DELETE CASCADE: Automatically deletes child rows when the parent row is deleted.
+> ON DELETE SET NULL: Sets the foreign key in the child table to NULL when the parent row is deleted.
+> ON UPDATE CASCADE: Updates child rows when the parent row's primary key is updated
+Example with constrains:-
+CREATE TABLE child_table (
+    child_id INT NOT NULL PRIMARY KEY,
+    parent_id INT,
+    description VARCHAR(255),
+    FOREIGN KEY (parent_id) REFERENCES parent_table(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+
+-- Adding a Foreign Key to an Existing Table
+If the table is already created, you can add a foreign key using the ALTER TABLE statement:
+Example:-
+ALTER TABLE child_table
+ADD CONSTRAINT fk_parent
+FOREIGN KEY (parent_id)
+REFERENCES parent_table(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+-- fk_parent: A name given to the foreign key constraint (optional but recommended for better management).
+
+
+-- Dropping a Foreign Key
+To remove a foreign key from a table:
+1. Find the name of the foreign key constraint:
+   SHOW CREATE TABLE child_table;
+
+2. Drop the foreign key:
+   ALTER TABLE child_table DROP FOREIGN KEY fk_parent;
