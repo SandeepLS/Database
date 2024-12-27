@@ -110,7 +110,12 @@ INSERT INTO MovieShow(ScreenID, MovieID, ShowDate, ShowTime, Format, Language) V
 ----------------------------------------------------------------------------------------------
 -- P2: Query to List Shows on a Given Date at a Theatre
 -- Customer can view the Movies list as per the dates.
-
+ SELECT MS.ShowID, MS.ShowDate, MS.ShowTime, MS.Format, MS.Language, M.Title AS MovieTitle, T.Name AS TheatreName, S.ScreenNumber
+    FROM MovieShow MS
+    JOIN Screen S ON MS.ScreenID = S.ScreenID
+    JOIN Theatre T ON S.TheatreID = T.TheatreID
+    JOIN Movie M ON MS.MovieID = M.MovieID
+    WHERE T.Name = 'PVR Nexus' AND MS.ShowDate = '2025-01-25';
 
 
 ----------------------------------------------------------------------------------------------
@@ -119,3 +124,35 @@ INSERT INTO MovieShow(ScreenID, MovieID, ShowDate, ShowTime, Format, Language) V
 INSERT INTO Customer (Name, Email, PhoneNumber) VALUES
     ('Sandeep LS', 'sandeep123@gmail.com', '1234567891');
 
+-- As a customer books a movies.
+-- 1.  Find the CustomerID
+SELECT CustomerID FROM Customer WHERE Name = 'Sandeep LS';
+
+-- 2. Find the ShowID
+SELECT MS.ShowID, M.Title, MS.ShowDate, MS.ShowTime, T.Name AS TheatreName, S.ScreenNumber
+     FROM MovieShow MS
+     JOIN Movie M ON MS.MovieID = M.MovieID
+     JOIN Screen S ON MS.ScreenID = S.ScreenID
+     JOIN Theatre T ON S.TheatreID = T.TheatreID;
+
+-- 3. Insert Booking
+INSERT INTO Booking (ShowID, CustomerID, SeatNumber)
+     VALUES (1, 1, 'A10');
+
+-- 4. Verify the Booking(Query to confirm the booking):
+ SELECT
+     B.BookingID,
+     C.Name AS CustomerName,
+     M.Title AS MovieTitle,
+     T.Name AS TheatreName,
+     S.ScreenNumber,
+     B.SeatNumber,
+     MS.ShowDate,
+     MS.ShowTime
+     FROM Booking B
+     JOIN Customer C ON B.CustomerID = C.CustomerID
+     JOIN MovieShow MS ON B.ShowID = MS.ShowID
+     JOIN Movie M ON MS.MovieID = M.MovieID
+     JOIN Screen S ON MS.ScreenID = S.ScreenID
+     JOIN Theatre T ON S.TheatreID = T.TheatreID
+     WHERE C.Name = 'Sandeep LS';
