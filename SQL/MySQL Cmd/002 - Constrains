@@ -54,10 +54,21 @@
     DESC EMPLOYEE;
 
 6) INDEX Constrains:- 59:00s
-  It's creating Indexs, Basically we used to retrive record from the database, quickly then any other method.
-  
-  CREATE INDEX DEMOINDEX ON EMPLOYEE(FirstName);
-  CREATE INDEX DEMOINDEX2 ON EMPLOYEE(FirstName, LastName, EmpZone);
-  SHOW INDEXES FROM EMPLOYEE;
-  DROP INDEX DEMOINDEX ON EMPLOYEE;
-  SHOW INDEXES FROM EMPLOYEE;
+  Indexes are used to retrieve data from the database more quickly, then any other method.
+  The users cannot see the indexes, they are just used to speed up searches/queries.
+  Creates an index on a table. Duplicate values are allowed:
+
+   Syntax:
+   CREATE INDEX index_name
+   ON table_name (column1, column2, ...);
+   
+   Examples:
+     CREATE INDEX DEMOINDEX ON EMPLOYEE(FirstName);   --single column name
+     CREATE INDEX DEMOINDEX2 ON EMPLOYEE(FirstName, LastName, EmpZone);   --Multiple Column name
+     SHOW INDEXES FROM EMPLOYEE;
+     DROP INDEX DEMOINDEX ON EMPLOYEE;
+     SHOW INDEXES FROM EMPLOYEE;
+   
+   In mysql cmd to drop index:
+   ALTER TABLE table_name
+   DROP INDEX index_name;
